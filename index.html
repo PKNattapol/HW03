@@ -1,48 +1,55 @@
-<html>
-	<script src='build/main.bundle.js'></script>
-	
-	<head>	
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<title>Beer Search</title>
+		
+		<script src='build/main.bundle.js'></script>
+		
+		<link rel="stylesheet" type="text/css" href="index.css">
+	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	
-	
-	<body style = "background-color: bisque";>
-	<style>
-
-#text {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-  border-radius: 10px
-}
-.item
-{
-	border: solid;
-	border-color: white;
-	height: 30%
-}
-</style>
-		<h1><center>Beer Search</center></h1>
-		
-		<form id="myForm" onsubmit="search()" target="my_iframe"><center>
-			<input id="name" type="radio" name="category" value="name" required> Name
-				
-			<input id="food" type="radio" name="category" value="food"> Food<br><br>
+	<body>
+		<div class="container">
+			<div id="title">
+				<h1 id="title">
+					<center>Beer Search</center>
+				</h1>
+			</div>
 			
-			
-			<input id="text" type="text" required /><br><br>
-			
-			<input type="submit" onclick="submit" />
-		</center></form>
+			<form id="myForm" onsubmit="search()" target="my_iframe">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					
+					<div class="col-sm-2" id="radio">
+						<input id="name" type="radio" name="category" value="name" required> Name
+					
+						<input id="food" type="radio" name="category" value="food"> Food<br><br>
+					</div>
+					
+					<div class="col-sm-6">
+						<input id="text" type="text" required /><br><br>
+					</div>
+					
+					<div class="col-sm-3">
+						<input type="submit" onclick="submit" />
+					</div>
+				</div>
+			</form>
+		</div>
 		
 		<iframe id="iframe" name="my_iframe" hidden></iframe>
 		
-		<ul id="data"></ul>
-		
+		<div class="container" id="data"></div>
 	</body>
 </html>

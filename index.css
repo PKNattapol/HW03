@@ -1,0 +1,33 @@
+.container
+{
+	background-color:WhiteSmoke;
+}
+
+#title
+{
+	background-color:DimGrey;
+	color:WhiteSmoke;
+}
+
+#text
+{
+	width:100%;
+}
+
+#radio
+{
+	padding-left:6%;
+}
+
+#img
+{
+	width:15%;
+	height:15%;
+}
+
+#item
+{
+	padding-top:3%;
+	padding-bottom:3%;
+	border-bottom:solid;
+}
