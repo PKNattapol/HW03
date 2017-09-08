@@ -1,0 +1,48 @@
+<html>
+	<script src='build/main.bundle.js'></script>
+	
+	<head>	
+		<title>Beer Search</title>
+	</head>
+	
+	
+	<body style = "background-color: bisque";>
+	<style>
+
+#text {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 10px
+}
+.item
+{
+	border: solid;
+	border-color: white;
+	height: 30%
+}
+</style>
+		<h1><center>Beer Search</center></h1>
+		
+		<form id="myForm" onsubmit="search()" target="my_iframe"><center>
+			<input id="name" type="radio" name="category" value="name" required> Name
+				
+			<input id="food" type="radio" name="category" value="food"> Food<br><br>
+			
+			
+			<input id="text" type="text" required /><br><br>
+			
+			<input type="submit" onclick="submit" />
+		</center></form>
+		
+		<iframe id="iframe" name="my_iframe" hidden></iframe>
+		
+		<ul id="data"></ul>
+		
+	</body>
+</html>
